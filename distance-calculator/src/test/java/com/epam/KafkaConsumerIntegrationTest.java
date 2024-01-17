@@ -28,7 +28,7 @@ class KafkaConsumerIntegrationTest {
     @Container
     static KafkaContainer kafkaContainer = new KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:latest"));
 
-    Logger log = LoggerFactory.getLogger(KafkaConsumerApplication.class.getSimpleName());
+    Logger log = LoggerFactory.getLogger(DistanceCalculatorApplication.class.getSimpleName());
 
     @DynamicPropertySource
     static void overridePropertiesInternal(DynamicPropertyRegistry registry) {

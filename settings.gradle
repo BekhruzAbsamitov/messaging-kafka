@@ -1,4 +1,5 @@
 rootProject.name = 'messaging-kafka'
 include 'kafka-producer'
-include 'kafka-consumer'
+include 'distance-calculator'
+include 'logging-service'
 
