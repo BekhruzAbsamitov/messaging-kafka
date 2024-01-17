@@ -1,4 +1,4 @@
-package com.epam.consumer;
+package com.epam.listener;
 
 import com.epam.LoggingServiceApplication;
 import com.epam.dto.VehicleDistance;

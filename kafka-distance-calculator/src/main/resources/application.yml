@@ -11,15 +11,3 @@ spring:
             trusted:
               packages: com.epam.dto
       auto-offset-reset: latest
-
-#    producer:
-#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-#      properties:
-#        spring:
-#          json:
-#            value:
-#              default:
-#                type: com.epam.dto.VehicleDistance
-#            trusted:
-#              packages: com.epam.dto

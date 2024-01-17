@@ -1,4 +1,4 @@
-package com.epam.service;
+package com.epam.publisher;
 
 import com.epam.dto.VehicleSignal;
 import org.slf4j.Logger;
@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 @Service
 public class KafkaMessagePublisher {
 
-    Logger log = LoggerFactory.getLogger(KafkaMessagePublisher.class.getSimpleName());
+    private final Logger log = LoggerFactory.getLogger(KafkaMessagePublisher.class.getSimpleName());
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
 

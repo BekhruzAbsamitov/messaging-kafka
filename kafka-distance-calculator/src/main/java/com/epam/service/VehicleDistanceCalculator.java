@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class VehicleDistanceCalculator {
@@ -14,11 +15,10 @@ public class VehicleDistanceCalculator {
     private final Map<String, Coordinate> lastCoordinate = new HashMap<>();
 
     public double calculate(VehicleSignal signal) {
-        double distance = 0;
         Coordinate previous = lastCoordinate.get(signal.getVehicleId());
-        if (previous != null) {
-            distance = calculateDistance(previous, signal.getCoordinate());
-        }
+        double distance = Optional.ofNullable(previous)
+                .map(coordinate -> calculateDistance(previous, signal.getCoordinate()))
+                .orElse(0D);
         lastCoordinate.put(signal.getVehicleId(), signal.getCoordinate());
         return distance;
     }
